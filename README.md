@@ -1,7 +1,7 @@
 # Reposi3
-A Cydia repository template. This template contains sample on how you can easily make depiction pages without replicating your html pages. The pages are styled using [Bootsrap](http://getbootstrap.com/) which is really easy to use. You can see how it looks like by visiting [this sample repo](https://supermamon.github.io/Reposi3/) on your desktop or mobile phone.
+A Cydia repository template. It is best used for static hosts like Github because it doesn't need server-side technologies like PHP. This template helps you easily make depiction pages without replicating your html pages. The pages are styled using [Bootsrap](http://getbootstrap.com/) which is really easy to use. You can see how this repo looks like by visiting [this sample repo](https://supermamon.github.io/Reposi3/) on your desktop or mobile phone.
 
-Most data for this repo is stored on XML files and are loaded on the depiction page dynamically. See the guide below on how to set it up. Note that this guide doesn't cover creating .deb files but will briefly cover assiging depictions.
+Most data for your repo will be stored on XML files and are loaded on the depiction page dynamically. See the guide below on how to set it up. Note that this guide doesn't cover creating .deb files but will briefly cover assiging depictions.
 
 ## How to install this template
 
@@ -10,6 +10,32 @@ The latest release will always be [here](https://github.com/supermamon/Reposi3/a
 
 ### 2. Extract
 Extract the contents into a subfolder on your website. If you're using [Github Pages](https://pages.github.com/), it should be under `username.github.io/repo`. You can change `repo` to anything you want like `cydia` for example. So your repo url would be `https://username.github.io/cydia`. For this guide we'll assume that you are using github your repo url is `https://username.github.io/repo`.
+
+The directory tree should look like this:
+
+```text
+repo                                   # Your repository root. 
+├───index.html                         # repo's home page. 
+├───CydiaIcon.png                      # repo icon 
+├───Packages.bz2                       # 
+├───Release                            # repo details
+├───repo.xml                           # Repo information 
+├───debs                               # debs folder
+│   └─── *.deb
+└───depictions                         # depictions folder
+    ├───changelog.html
+    ├───index.html	
+    ├───screenshots.html
+    ├───js
+    │   ├───data-loader-engine.js
+    │   ├───ios_version_check.js
+    │   └───jquery.querystring.js							
+    └───package                        # your package information folder.
+        ├───changelog.xml	
+		└───info.xml
+```
+
+Note: If you're using [Github Pages](https://pages.github.com/), I suggest that you create a separate project for your repo. Then create a `gh-pages` branch for it. This would help you separate your github site from your repo.
 
 #### 3. Personalize
 Edit `Release` file. Modify the items pointed by `<--`
