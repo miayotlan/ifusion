@@ -5,12 +5,12 @@
   "footerlinks" : [
     {
       "name"  : "Follow me on Twitter",
-      "url"   : "https://twitter.com//reposi3",
+      "url"   : "https://twitter.com/reposi3",
       "icon"  : "glyphicon glyphicon-user"
     },
     {
       "name"  : "I want this depiction template",
-      "url"   : "https://github.com/supermamon//Reposi3",
+      "url"   : "https://github.com/supermamon/Reposi3",
       "icon"  : "glyphicon glyphicon-thumbs-up"
     }
   ]

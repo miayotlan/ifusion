@@ -30,5 +30,8 @@
       {"image":"cydia.jpg", "description":"This is a description for screenshot 1. It's Cydia!"},
       {"image":"shot1.jpg","description":"Another screenshot"}
     ]
-  }
+  },
+  "links"     : [
+
+  ]
 }

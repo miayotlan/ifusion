@@ -32,6 +32,7 @@
                 var a = $("<a class='btn btn-link'>");
                 $(a).attr("id",pid);
                 $(a).attr("href","depictions/?p=" + package);
+                $(a).html(package);
                 $(p).append(a);
                 $(e).append(p);
                 var pkg = [{

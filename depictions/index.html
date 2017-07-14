@@ -27,7 +27,7 @@
       'elements'  : {
         '#repoFooterLinks': {'type':'custom', "source":"footerlinks",
           "render" : function(element,source) {
-            if ($(source).size() == 0) {$('#externalLinksContainer').hide()}
+            if ($(source).size() == 0) {$('#contactInfo').hide()}
             $.each(source, function(index,data) {
               var p = $("<li class='list-group-item'>");
               var a = $("<a class='btn btn-link'>")
@@ -80,9 +80,17 @@
                             }
         },
         '#versionBadge'   : {'type':'text','source':'changelog','select':'firstKey'},
-        '#changesList'    : {'type':'list','source':'changelog','select':'firstValue',
-                            'listElement':"<li class='list-group-item'>",
-                            'ifEmpty':function(e){$("#changesList").hide()},
+        '#changesList'    : {'type':'custom','source':'changelog','select':'firstValue',
+                            "ifEmpty":function(e){$("#changesList").hide()},
+                            "render" : function(element, source) {
+                              $.each(source, function(index, item) {
+                                  console.log("item="+item);
+                                  var p = $("<li class='list-group-item'>");
+                                  $(p).append(item);
+                                  $(element).append(p);
+                              });
+
+                            },
                             'afterRender':function(e,data) {
                               var a = $('<A>')
                                 .attr('href','changelog.html?p='+bundleid)
@@ -95,10 +103,20 @@
                             'listElement':"<li class='list-group-item'>",
                             'ifEmpty':function(e){$("#dependenciesContainer").hide()}
         },
-        '#externalLinksList' : {'type':'list','source':'links',
-                            'listElement':"<li class='list-group-item'>",
-                            'ifEmpty':function(e){$("#externalLinksContainer").hide()}
-        }//#externalLinksList
+        '#externalLinksList' : {'type':'custom','source':'links',
+                                "render" : function(element, source) {
+                                  if ($(source).size() == 0 ) {$("#externalLinksContainer").hide()}
+                                  $.each(source, function(index,data) {
+                                    var p = $("<li class='list-group-item'>");
+                                    var a = $("<a class='btn btn-link'>")
+                                      .attr("href",data.url)
+                                      .attr("target",isCydia?"_blank":"_self");
+                                    $(a).html(data.name);
+                                    $(p).append(a)
+                                    $(element).append(p);
+                                  }); // each
+                                } //render
+                              }//#externalLinksList
       }// elements
     }
   ];

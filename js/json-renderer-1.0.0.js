@@ -56,6 +56,14 @@ JSONRenderer.prototype.runEngine = function(elements, data)
     self.log('  .source='+sourceDef.source);
     self.log('  .element='+element);
 
+    var append = true;
+    var fnRenderListElement = function(el,obj,append,parent) {
+      if (!parent) {parent=$(document)};
+      if (append) {$(parent).append(obj);}
+      else {$(parent).prepend(obj);}
+    };
+
+
 
     // go out if key element does not exits
     if (!$(element)) {return}
