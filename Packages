@@ -1,12 +1,12 @@
-Package: com.supermamon.oldpackage
-Version: 1.0.0-1
-Section: Tweaks
-Maintainer: Reposi3 <at.supermamon@gmail.com>
-Author: Reposi3 <at.supermamon@gmail.com>
+Package: com.ifusion.org.dragonballios11
+Version: 1.0
+Section: Themes
+Maintainer:  <sam83guzman@hotmail.com>
+Author: Sirglide <sam83guzman@hotmail.com>
 Architecture: iphoneos-arm
-Filename: ./debs/com.reposi3.oldpackage-1.0.0-1.deb
-Size: 754
-MD5sum: eb9ac8cd0ccaf483f1a960f2165bc1a8
-Description: This is an old package. Requires iOS 7 and below.
-Name: Old Package
-Depiction: https://supermamon.github.io/reposi3/depictions/?p=com.supermamon.oldpackage
+Filename: ./debs/com.ifusion.org.dragonballios11-1.0.deb
+Size: 9437184
+MD5sum: 263AAE1E02E3EF3C2D38911922C37814
+Description: This is a theme for ios 11 requires Anemone. Tested on ios 11.1.2.
+Name: dragonballios11
+Depiction: http://ifusion.org/depictions/?p=com.ifusion.org.dragonballios11
