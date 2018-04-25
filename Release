@@ -1,8 +1,8 @@
-Origin: Ifusion Repo
-Label: Ifusion Repo
+Origin: Ifusion.org
+Label: Ifusion.org
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm
 Components: main
-Description: Ifusion Repo For My Custom Themes & Future Tweaks
+Description: Ifusion.Org Repo For My Custom Themes & Future Tweaks
